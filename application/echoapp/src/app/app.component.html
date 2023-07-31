@@ -1,0 +1,8 @@
+<div style="text-align:center">
+  <h1>
+    Welcome to Echo App!
+  </h1>
+  <input [(ngModel)]="userInput" placeholder="Enter a string">
+  <button (click)="sendString()">Send</button>
+  <p *ngIf="returnedString">{{returnedString}}</p>
+</div>
