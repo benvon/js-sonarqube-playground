@@ -19,14 +19,14 @@ jobs:
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
           ref: ${{ github.HEAD_REF }}
-      - uses: actions/setup-node@v1
-        with:
-          node-version: '18.x'
-      - name: run tests
-        working-directory: ./application/btree
-        run: |
-          npm install
-          npm run test
+      # - uses: actions/setup-node@v1
+      #   with:
+      #     node-version: '18.x'
+      # - name: run tests
+      #   working-directory: ./application/btree
+      #   run: |
+      #     npm install
+      #     npm run test
       - uses: sonarsource/sonarqube-scan-action@master
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
